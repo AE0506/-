@@ -1,0 +1,96 @@
+<!-- life-loan/index.wxml -->
+<view class="container">
+  <!-- 头部导航 -->
+  <view class="header">
+    <view class="back-btn" bindtap="navigateBack">
+      <text class="back-icon">‹</text>
+    </view>
+    <text class="header-title">生活信贷</text>
+  </view>
+
+  <!-- 顶部信息区 -->
+  <view class="top-section">
+    <view class="title-section">
+      <view class="title-icon">
+        <text class="icon">📋</text>
+      </view>
+      <text class="section-title">生活贷款</text>
+    </view>
+    <view class="credit-score">
+      <text class="score-number">80</text>
+    </view>
+  </view>
+
+  <!-- 贷款类型选择 -->
+  <view class="loan-types">
+    <view class="loan-type-card">
+      <text class="loan-type-title">应急贷</text>
+      <button class="apply-button" bindtap="applyEmergencyLoan">立即申请</button>
+    </view>
+    <view class="loan-type-card">
+      <text class="loan-type-title">消费贷</text>
+      <button class="apply-button" bindtap="applyConsumptionLoan">立即申请</button>
+    </view>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="quick-entries">
+    <view class="entry-item" bindtap="checkLimit">
+      <view class="entry-icon">
+        <text class="icon">📊</text>
+      </view>
+      <text class="entry-text">额度查询</text>
+    </view>
+    <view class="entry-item" bindtap="repaymentPlan">
+      <view class="entry-icon">
+        <text class="icon">📝</text>
+      </view>
+      <text class="entry-text">还款计划</text>
+    </view>
+    <view class="entry-item" bindtap="loanRecord">
+      <view class="entry-icon">
+        <text class="icon">📋</text>
+      </view>
+      <text class="entry-text">贷款记录</text>
+    </view>
+    <view class="entry-item" bindtap="loanPlan">
+      <view class="entry-icon">
+        <text class="icon">📈</text>
+      </view>
+      <text class="entry-text">贷款计划</text>
+    </view>
+    <view class="entry-item" bindtap="quickEntry">
+      <view class="entry-icon">
+        <text class="icon">📅</text>
+      </view>
+      <text class="entry-text">快捷入口</text>
+    </view>
+    <view class="entry-item" bindtap="promotionActivity">
+      <view class="entry-icon">
+        <text class="icon">🎁</text>
+      </view>
+      <text class="entry-text">优惠活动</text>
+    </view>
+  </view>
+
+  <!-- 大家都在问 -->
+  <view class="faq-section">
+    <text class="faq-title">大家都在问</text>
+    <view class="faq-item" bindtap="goToAIAnswer" data-question="贷款需要什么手续">
+      <text class="faq-question">💬 贷款需要什么手续</text>
+      <text class="faq-arrow">›</text>
+    </view>
+    <view class="faq-item" bindtap="goToAIAnswer" data-question="贷款有什么限制">
+      <text class="faq-question">💬 贷款有什么限制</text>
+      <text class="faq-arrow">›</text>
+    </view>
+    <view class="faq-item" bindtap="goToAIAnswer" data-question="贷款数额不显示">
+      <text class="faq-question">💬 贷款数额不显示</text>
+      <text class="faq-arrow">›</text>
+    </view>
+    <view class="contact-us">
+      <text class="contact-text">联系我们</text>
+    </view>
+  </view>
+</view>
+

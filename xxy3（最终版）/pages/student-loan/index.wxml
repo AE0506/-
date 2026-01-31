@@ -1,0 +1,33 @@
+<!-- student-loan/index.wxml -->
+<view class="container">
+  <view class="loan-card">
+    <text class="card-title">助学信贷</text>
+    <view class="card-content">
+      <view class="info-row">
+        <text class="info-label">最大额度</text>
+        <text class="info-value">{{loanInfo.maxAmount}}元</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">利率</text>
+        <text class="info-value highlight">{{loanInfo.interestRate}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">期限</text>
+        <text class="info-value">{{loanInfo.term}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="apply-section">
+    <text class="section-title">申请条件</text>
+    <view class="condition-list">
+      <text>• 在校学生</text>
+      <text>• 无不良信用记录</text>
+      <text>• 家庭经济困难</text>
+      <text>• 学习成绩良好</text>
+    </view>
+  </view>
+
+  <button class="apply-btn" bindtap="applyLoan">立即申请</button>
+</view>
+

@@ -1,0 +1,37 @@
+<!-- profile/index.wxml -->
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view class="user-card" bindtap="loginButtonTap">
+    <view class="user-avatar">
+      <image wx:if="{{userInfo.avatarUrl}}" class="avatar-img" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+      <text wx:else class="avatar-emoji">👤</text>
+    </view>
+    <view class="user-info">
+      <text class="user-name">{{userInfo.nickName}}</text>
+      <text class="user-id">学号: {{userInfo.studentId}}</text>
+    </view>
+    <view class="arrow-btn">{{hasLogin ? '›' : '登录'}}</view>
+  </view>
+
+  <!-- 菜单列表 -->
+  <view class="menu-list">
+    <block wx:for="{{menuList}}" wx:key="index">
+      <view class="menu-item" bindtap="onMenuClick" data-path="{{item.path}}">
+        <view class="menu-icon">{{item.icon}}</view>
+        <text class="menu-title">{{item.title}}</text>
+        <view class="menu-arrow">›</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 退出登录 -->
+  <view class="logout-btn" bindtap="logout" wx:if="{{hasLogin}}">
+    <text class="logout-text">退出登录</text>
+  </view>
+  
+  <!-- 登录按钮（当未登录时显示） -->
+  <view class="login-prompt" wx:if="{{!hasLogin}}">
+    <text class="prompt-text">登录后可使用更多功能</text>
+  </view>
+</view>
+

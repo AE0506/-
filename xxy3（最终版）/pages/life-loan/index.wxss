@@ -1,0 +1,195 @@
+/* life-loan/index.wxss */
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* 头部导航 */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx 20rpx;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #ffffff;
+}
+
+.back-btn {
+  margin-right: 20rpx;
+}
+
+.back-icon {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+/* 顶部信息区 */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 0 0 30rpx 30rpx;
+  color: #ffffff;
+  margin-bottom: 30rpx;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+}
+
+.title-icon {
+  margin-right: 20rpx;
+}
+
+.icon {
+  font-size: 48rpx;
+}
+
+.section-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.credit-score {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-number {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #07c160;
+}
+
+/* 贷款类型选择 */
+.loan-types {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.loan-type-card {
+  width: 48%;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loan-type-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 30rpx;
+}
+
+.apply-button {
+  width: 100%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #ffffff;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  height: 70rpx;
+}
+
+.apply-button::after {
+  border: none;
+}
+
+/* 快捷入口 */
+.quick-entries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30rpx;
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.entry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entry-icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  background-color: #f0f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+
+.entry-text {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+/* 大家都在问 */
+.faq-section {
+  margin: 0 30rpx 40rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.faq-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 30rpx;
+  display: block;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  font-size: 28rpx;
+  color: #666666;
+  flex: 1;
+}
+
+.faq-arrow {
+  font-size: 32rpx;
+  color: #cccccc;
+}
+
+.contact-us {
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 28rpx;
+  color: #999999;
+}
+

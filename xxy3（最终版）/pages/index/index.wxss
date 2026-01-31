@@ -1,0 +1,259 @@
+/* index.wxss */
+
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* 头部区域 */
+.header {
+  background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+  padding: 20rpx 30rpx 60rpx;
+  position: relative;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30rpx;
+  padding: 15rpx 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.search-icon {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.search-text {
+  color: #999999;
+  font-size: 28rpx;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.logo-wrapper {
+  width: 400rpx;
+  height: 200rpx;
+  position: relative;
+}
+
+.logo-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-book {
+  font-size: 80rpx;
+  margin-bottom: -20rpx;
+}
+
+.logo-shield {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15rpx;
+  position: relative;
+  border: 3rpx solid #1890ff;
+}
+
+.logo-sc {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.logo-checkmark {
+  font-size: 24rpx;
+  color: #52c41a;
+}
+
+.logo-arrow {
+  font-size: 60rpx;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* 功能图标网格 */
+.function-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30rpx;
+  padding: 40rpx 20rpx;
+  background-color: #ffffff;
+}
+
+.function-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.function-icon-wrapper {
+  width: 100rpx;
+  height: 100rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.function-icon {
+  font-size: 50rpx;
+}
+
+.checkmark-badge {
+  position: absolute;
+  top: -5rpx;
+  right: -5rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #52c41a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20rpx;
+  color: #ffffff;
+}
+
+.function-label {
+  font-size: 24rpx;
+  color: #333333;
+  text-align: center;
+}
+
+/* 标签切换区域 */
+.section-tabs {
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: 2rpx solid #f0f0f0;
+  padding: 0 30rpx;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 25rpx 0;
+  position: relative;
+}
+
+.tab-text {
+  font-size: 30rpx;
+  color: #666666;
+}
+
+.tab-item.active .tab-text {
+  color: #1890ff;
+  font-weight: bold;
+}
+
+.tab-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4rpx;
+  background-color: #1890ff;
+  transition: width 0.3s;
+}
+
+.tab-underline.show {
+  width: 60%;
+}
+
+/* Banner 卡片区域 */
+.banner-card {
+  margin: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.banner-image {
+  width: 100%;
+  height: 400rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-emoji {
+  font-size: 120rpx;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20rpx;
+  text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+
+.banner-stats {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20rpx;
+}
+
+.banner-badge {
+  position: absolute;
+  top: 200rpx;
+  right: 30rpx;
+  background-color: #ff6b00;
+  color: #ffffff;
+  padding: 8rpx 15rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.banner-button {
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+  background-color: #ff6b00;
+  padding: 15rpx 40rpx;
+  border-radius: 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.3);
+}
+
+.button-text {
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+

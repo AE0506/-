@@ -1,0 +1,111 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头部搜索区域 -->
+  <view class="header">
+    <view class="search-bar" bindtap="onSearch">
+      <text class="search-icon">🔍</text>
+      <text class="search-text">搜索</text>
+    </view>
+    <!-- Logo区域 -->
+    <view class="logo-container">
+      <view class="logo-wrapper">
+        <view class="logo-elements">
+          <view class="logo-book">📖</view>
+          <view class="logo-shield" style="position: relative; left: -14rpx; top: 0rpx">
+            <text class="logo-sc">SC</text>
+            <view class="logo-checkmark">✓</view>
+          </view>
+          <view class="logo-arrow">↑E</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能图标网格 -->
+  <view class="function-grid">
+    <view class="function-item" bindtap="goToCreditEvaluation">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">📋</view>
+        <view class="checkmark-badge">✓</view>
+      </view>
+      <text class="function-label">信誉评估</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToStudentLoan">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">💫</view>
+      </view>
+      <text class="function-label">助学信贷</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToBusinessLoan">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">🏆</view>
+      </view>
+      <text class="function-label">创业信贷</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToLifeLoan">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">✓</view>
+      </view>
+      <text class="function-label">生活信贷</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToEducation">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">🎓</view>
+      </view>
+      <text class="function-label">教育公益</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToCampusActivities">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">🏕️</view>
+      </view>
+      <text class="function-label">校园活动</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToWorkStudy">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">💻</view>
+      </view>
+      <text class="function-label">勤工助学</text>
+    </view>
+    
+    <view class="function-item" bindtap="goToLifePayments">
+      <view class="function-icon-wrapper">
+        <view class="function-icon">🏠</view>
+      </view>
+      <text class="function-label">生活缴费</text>
+    </view>
+  </view>
+
+  <!-- 标签切换区域 -->
+  <view class="section-tabs">
+    <view class="tab-item {{currentTab === 'activity' ? 'active' : ''}}" bindtap="switchTab" data-tab="activity">
+      <text class="tab-text">热门活动</text>
+      <view class="tab-underline {{currentTab === 'activity' ? 'show' : ''}}"></view>
+    </view>
+    <view class="tab-item {{currentTab === 'product' ? 'active' : ''}}" bindtap="switchTab" data-tab="product">
+      <text class="tab-text">热门产品</text>
+      <view class="tab-underline {{currentTab === 'product' ? 'show' : ''}}"></view>
+    </view>
+  </view>
+
+  <!-- Banner 卡片区域 -->
+  <view class="banner-card">
+    <view class="banner-image">
+      <view class="banner-emoji">🏫</view>
+    </view>
+    <view class="banner-overlay">
+      <view class="banner-title">勤工俭学, 服务校园</view>
+      <view class="banner-stats">XX人次已参与</view>
+      <view class="banner-badge">志愿!</view>
+      <view class="banner-button" bindtap="goToActivityDetail">
+        <text class="button-text">帮助A</text>
+      </view>
+    </view>
+  </view>
+</view>
+

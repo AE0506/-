@@ -1,0 +1,23 @@
+<!-- life-payments/index.wxml -->
+<view class="container">
+  <view class="header-section">
+    <text class="title">生活缴费</text>
+    <text class="subtitle">便捷缴费服务</text>
+  </view>
+
+  <view class="payment-grid">
+    <view 
+      class="payment-item" 
+      wx:for="{{paymentList}}" 
+      wx:key="id"
+      bindtap="payBill"
+      data-id="{{item.id}}"
+    >
+      <view class="payment-icon" style="background-color: {{item.color}};">
+        <text>{{item.icon}}</text>
+      </view>
+      <text class="payment-name">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+

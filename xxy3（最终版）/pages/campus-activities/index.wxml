@@ -1,0 +1,32 @@
+<!-- campus-activities/index.wxml -->
+<view class="container">
+  <view class="header-section">
+    <text class="title">校园活动</text>
+    <text class="subtitle">丰富校园生活</text>
+  </view>
+
+  <view class="activity-list">
+    <view 
+      class="activity-item" 
+      wx:for="{{activityList}}" 
+      wx:key="id"
+      bindtap="viewDetail"
+      data-id="{{item.id}}"
+    >
+      <view class="activity-icon">🏕️</view>
+      <view class="activity-content">
+        <text class="activity-title">{{item.title}}</text>
+        <text class="activity-location">📍 {{item.location}}</text>
+        <text class="activity-date">📅 {{item.date}}</text>
+        <text class="activity-status">{{item.status}}</text>
+      </view>
+      <view class="activity-arrow">›</view>
+    </view>
+  </view>
+
+  <view class="empty-state" wx:if="{{activityList.length === 0}}">
+    <text class="empty-icon">🎪</text>
+    <text class="empty-text">暂无活动</text>
+  </view>
+</view>
+

@@ -1,0 +1,73 @@
+<!-- credit-evaluation/index.wxml -->
+<view class="container">
+  <!-- 加载状态 -->
+  <view class="loading-overlay" wx:if="{{isLoading}}">
+    <view class="loading-content">
+      <view class="loading-spinner"></view>
+      <text class="loading-text">AI评估中...</text>
+    </view>
+  </view>
+
+  <!-- 信誉评分卡片 -->
+  <view class="score-card">
+    <text class="score-label">AI信誉评分</text>
+    <text class="score-value">{{creditScore}}</text>
+    <text class="score-level">{{creditLevel}}</text>
+      <view class="score-date">
+        <text>{{currentDate}} 更新</text>
+      </view>
+  </view>
+
+  <!-- 评估详情 -->
+  <view class="evaluation-section">
+    <view class="section-header">
+      <text class="section-title">AI维度评估</text>
+      <text class="section-desc">基于多维度数据分析</text>
+    </view>
+
+    <view class="evaluation-list">
+      <view class="evaluation-item" wx:for="{{evaluationList}}" wx:key="label">
+        <view class="item-header">
+          <text class="item-label">{{item.label}}</text>
+          <text class="item-score">{{item.score}}/{{item.fullScore}}</text>
+        </view>
+        <text class="item-description">{{item.description}}</text>
+        <view class="progress-bar">
+          <view class="progress" style="width: {{item.score}}%"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- AI建议 -->
+  <view class="suggestions-section" wx:if="{{aiSuggestions.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">AI个性化建议</text>
+      <text class="section-desc">基于您的表现生成</text>
+    </view>
+    <view class="suggestions-list">
+      <view class="suggestion-item" wx:for="{{aiSuggestions}}" wx:key="index">
+        <text class="suggestion-icon">💡</text>
+        <text class="suggestion-text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="refresh-btn" bindtap="onRefresh">
+      <text class="btn-icon">🔄</text>
+      重新评估
+    </button>
+    <button class="report-btn" bindtap="viewDetailedReport">
+      <text class="btn-icon">📊</text>
+      查看详细报告
+    </button>
+  </view>
+
+  <!-- 提示信息 -->
+  <view class="tips">
+    <text>📈 良好的信誉记录有助于获得更多校园服务和机会</text>
+  </view>
+</view>
+

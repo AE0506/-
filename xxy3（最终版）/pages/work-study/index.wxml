@@ -1,0 +1,28 @@
+<!-- work-study/index.wxml -->
+<view class="container">
+  <view class="header-section">
+    <text class="title">勤工助学</text>
+    <text class="subtitle">校内兼职机会</text>
+  </view>
+
+  <view class="job-list">
+    <view class="job-item" wx:for="{{jobList}}" wx:key="id">
+      <view class="job-icon">💻</view>
+      <view class="job-content">
+        <text class="job-title">{{item.title}}</text>
+        <text class="job-location">📍 {{item.location}}</text>
+        <view class="job-info">
+          <text class="job-salary">💰 {{item.salary}}</text>
+          <text class="job-hours">⏰ {{item.hours}}</text>
+        </view>
+      </view>
+      <button class="apply-btn" bindtap="applyJob" data-id="{{item.id}}">申请</button>
+    </view>
+  </view>
+
+  <view class="empty-state" wx:if="{{jobList.length === 0}}">
+    <text class="empty-icon">💼</text>
+    <text class="empty-text">暂无岗位</text>
+  </view>
+</view>
+

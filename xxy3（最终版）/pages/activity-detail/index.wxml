@@ -1,0 +1,76 @@
+<!-- activity-detail/index.wxml -->
+<view class="container">
+  <!-- 活动图片 -->
+  <view class="activity-image">
+    <view class="image-placeholder">
+      <text class="emoji-icon">🏫</text>
+    </view>
+    <view class="participants-badge">
+      <text>{{activityInfo.participants}}人次已参与</text>
+    </view>
+  </view>
+
+  <!-- 活动信息 -->
+  <view class="activity-content">
+    <!-- 标题和副标题 -->
+    <view class="activity-header">
+      <text class="activity-title">{{activityInfo.title}}</text>
+      <text class="activity-subtitle">{{activityInfo.subTitle}}</text>
+    </view>
+
+    <!-- 基本信息 -->
+    <view class="info-section">
+      <view class="info-item">
+        <text class="info-label">📍 地点</text>
+        <text class="info-value">{{activityInfo.location}}</text>
+      </view>
+      <view class="info-item">
+        <text class="info-label">📅 时间</text>
+        <text class="info-value">{{activityInfo.date}}</text>
+      </view>
+      <view class="info-item">
+        <text class="info-label">👤 主办</text>
+        <text class="info-value">{{activityInfo.organizer}}</text>
+      </view>
+    </view>
+
+    <!-- 活动描述 -->
+    <view class="description-section">
+      <text class="section-title">活动简介</text>
+      <text class="description-text">{{activityInfo.description}}</text>
+    </view>
+
+    <!-- 报名要求 -->
+    <view class="requirements-section">
+      <text class="section-title">报名要求</text>
+      <view class="tag-list">
+        <view class="tag-item" wx:for="{{activityInfo.requirements}}" wx:key="index">
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 活动福利 -->
+    <view class="benefits-section">
+      <text class="section-title">活动福利</text>
+      <view class="benefit-list">
+        <view class="benefit-item" wx:for="{{activityInfo.benefits}}" wx:key="index">
+          <text class="benefit-icon">✓</text>
+          <text>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="footer-bar">
+    <button 
+      class="join-btn {{hasJoined ? 'joined' : ''}}" 
+      bindtap="joinActivity"
+      disabled="{{hasJoined}}"
+    >
+      {{hasJoined ? '已参与' : '参与活动'}}
+    </button>
+  </view>
+</view>
+

@@ -1,0 +1,74 @@
+/**app.wxss**/
+page {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+/* 全局按钮样式 */
+.button-primary {
+  background-color: #1890ff;
+  color: #ffffff;
+  border-radius: 8rpx;
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+}
+
+.button-primary:active {
+  background-color: #096dd9;
+}
+
+/* 全局卡片样式 */
+.card {
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 全局标题样式 */
+.title-large {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+
+.title-medium {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 15rpx;
+}
+
+.title-small {
+  font-size: 24rpx;
+  color: #666666;
+  margin-bottom: 10rpx;
+}
+
+/* 全局文本样式 */
+.text-primary {
+  color: #1890ff;
+}
+
+.text-success {
+  color: #52c41a;
+}
+
+.text-warning {
+  color: #faad14;
+}
+
+.text-danger {
+  color: #f5222d;
+}
+
+.text-muted {
+  color: #999999;
+}
+
